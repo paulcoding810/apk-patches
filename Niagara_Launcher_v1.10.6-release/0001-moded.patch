@@ -1,0 +1,27 @@
+diff --git a/smali/b/fXuGinrJ5YInm9S37.smali b/smali/b/fXuGinrJ5YInm9S37.smali
+index 1748fb3..a198c2d 100644
+--- a/smali/b/fXuGinrJ5YInm9S37.smali
++++ b/smali/b/fXuGinrJ5YInm9S37.smali
+@@ -21,6 +21,9 @@
+     .line 2
+     .line 3
+     .line 4
++
++    const/4 p1, 0x1
++    
+     iput-boolean p1, p0, Lb/fXuGinrJ5YInm9S37;->NSD5zz4HoTowE2P1uXw:Z
+ 
+     .line 5
+diff --git a/smali/b/uauPzdjbSmHYY5.smali b/smali/b/uauPzdjbSmHYY5.smali
+index 4b8bff5..6b40ac0 100644
+--- a/smali/b/uauPzdjbSmHYY5.smali
++++ b/smali/b/uauPzdjbSmHYY5.smali
+@@ -129,7 +129,7 @@
+ 
+     .line 16
+     .line 17
+-    const/4 v1, 0x0
++    const/4 v1, 0x1
+ 
+     .line 18
+     invoke-direct {v0, v1, v1, v1}, Lb/fXuGinrJ5YInm9S37;-><init>(ZZZ)V
