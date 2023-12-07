@@ -1,0 +1,16 @@
+diff --git a/smali_classes4/com/rsupport/mobizen/premium/user/license/MobiLicense.smali b/smali_classes4/com/rsupport/mobizen/premium/user/license/MobiLicense.smali
+index f004c12f..492b0b9b 100644
+--- a/smali_classes4/com/rsupport/mobizen/premium/user/license/MobiLicense.smali
++++ b/smali_classes4/com/rsupport/mobizen/premium/user/license/MobiLicense.smali
+@@ -79,7 +79,10 @@
+     iput-object v0, p0, Lcom/rsupport/mobizen/premium/user/license/MobiLicense;->payload:Ljava/lang/String;
+ 
+     .line 4
+-    iput-object p1, p0, Lcom/rsupport/mobizen/premium/user/license/MobiLicense;->licenseId:Ljava/lang/String;
++
++    const-string v0, "PREMIUM"
++
++    iput-object v0, p0, Lcom/rsupport/mobizen/premium/user/license/MobiLicense;->licenseId:Ljava/lang/String;
+ 
+     .line 5
+     iput-object p2, p0, Lcom/rsupport/mobizen/premium/user/license/MobiLicense;->licenseSubType:Ljava/lang/String;
