@@ -1,0 +1,13 @@
+diff --git a/smali_classes2/us/nobarriers/elsa/api/user/server/model/receive/purchase/Subscription.smali b/smali_classes2/us/nobarriers/elsa/api/user/server/model/receive/purchase/Subscription.smali
+index f89c9cce..9fdb26fe 100644
+--- a/smali_classes2/us/nobarriers/elsa/api/user/server/model/receive/purchase/Subscription.smali
++++ b/smali_classes2/us/nobarriers/elsa/api/user/server/model/receive/purchase/Subscription.smali
+@@ -85,6 +85,8 @@
+ 
+     .line 1
+     iget-object v0, p0, Lus/nobarriers/elsa/api/user/server/model/receive/purchase/Subscription;->subscription:Ljava/lang/String;
++    
++    const-string v0, "premium_membership"
+ 
+     return-object v0
+ .end method
