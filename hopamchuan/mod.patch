@@ -1,0 +1,85 @@
+diff --git a/smali_classes2/com/google/firebase/crashlytics/FirebaseCrashlytics.smali b/smali_classes2/com/google/firebase/crashlytics/FirebaseCrashlytics.smali
+index 7fbf1695..b995af75 100644
+--- a/smali_classes2/com/google/firebase/crashlytics/FirebaseCrashlytics.smali
++++ b/smali_classes2/com/google/firebase/crashlytics/FirebaseCrashlytics.smali
+@@ -468,6 +468,7 @@
+ 
+ .method public recordException(Ljava/lang/Throwable;)V
+     .locals 1
++    return-void
+ 
+     if-nez p1, :cond_0
+ 
+diff --git a/smali_classes3/com/hac/android/guitarchord/MainActivity.smali b/smali_classes3/com/hac/android/guitarchord/MainActivity.smali
+index d7577092..89fb3195 100644
+--- a/smali_classes3/com/hac/android/guitarchord/MainActivity.smali
++++ b/smali_classes3/com/hac/android/guitarchord/MainActivity.smali
+@@ -313,7 +313,10 @@
+ 
+ .method private showIntro()Z
+     .locals 3
++    const/4 v0, 0x1
+ 
++    return v0
++    
+     const-string v0, "user-settings"
+ 
+     const/4 v1, 0x0
+@@ -492,6 +495,33 @@
+     return-void
+ .end method
+ 
++.method private disableAds()V
++    .locals 3   
++ 
++    const-string v0, "user-settings"
++
++    const/4 v1, 0x0
++
++    .line 596
++    invoke-virtual {p0, v0, v1}, Lcom/hac/android/guitarchord/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
++
++    move-result-object v0
++
++    .line 597
++    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v0
++
++    const-string v2, "visible"
++
++    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++
++    move-result-object v0
++
++    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
++
++    return-void
++.end method
++
+ .method private thankYouPurchased()V
+     .locals 3
+ 
+@@ -1107,6 +1137,8 @@
+ 
+     iput-object p1, p0, Lcom/hac/android/guitarchord/MainActivity;->billingClient:Lcom/android/billingclient/api/BillingClient;
+ 
++    invoke-direct {p0}, Lcom/hac/android/guitarchord/MainActivity;->disableAds()V
++
+     .line 178
+     invoke-virtual {p0}, Lcom/hac/android/guitarchord/MainActivity;->refreshUser()V
+ 
+diff --git a/smali_classes3/com/hac/android/guitarchord/utils/Helpers.smali b/smali_classes3/com/hac/android/guitarchord/utils/Helpers.smali
+index 35f4c8d8..d3f5ef9a 100644
+--- a/smali_classes3/com/hac/android/guitarchord/utils/Helpers.smali
++++ b/smali_classes3/com/hac/android/guitarchord/utils/Helpers.smali
+@@ -157,7 +157,8 @@
+     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+ 
+     move-result v1
+-
++    
++    const/4 v1, 0x1
+     if-eqz v1, :cond_0
+ 
+     return-void
