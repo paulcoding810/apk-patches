@@ -1,0 +1,27 @@
+diff --git a/smali/com/songsterr/CrackChecker.smali b/smali/com/songsterr/CrackChecker.smali
+index d96bc05..e1cc9d7 100644
+--- a/smali/com/songsterr/CrackChecker.smali
++++ b/smali/com/songsterr/CrackChecker.smali
+@@ -44,7 +44,7 @@
+ 
+     if-eq v0, v1, :cond_0
+ 
+-    const/4 v0, 0x1
++    const/4 v0, 0x0
+ 
+     goto :goto_0
+ 
+diff --git a/smali/com/songsterr/domain/json/User.smali b/smali/com/songsterr/domain/json/User.smali
+index e6a533d..3b48a55 100644
+--- a/smali/com/songsterr/domain/json/User.smali
++++ b/smali/com/songsterr/domain/json/User.smali
+@@ -254,7 +254,8 @@
+ 
+     move-result v0
+ 
+-    return v0
++    const/4 v3, 0x1
++    return v3
+ .end method
+ 
+ .method public final b()Z
