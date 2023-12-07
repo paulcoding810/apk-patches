@@ -1,0 +1,82 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 08860ba3..ee67459e 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -8,7 +8,6 @@
+     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+     <uses-permission android:name="android.permission.CAMERA"/>
+     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+-    <uses-permission android:name="android.permission.VIBRATE"/>
+     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+     <uses-permission android:name="android.hardware.sensor.accelerometer"/>
+diff --git a/smali_classes2/com/inshot/screenrecorder/iab/q$c.smali b/smali_classes2/com/inshot/screenrecorder/iab/q$c.smali
+index f87058ba..f88d5c61 100644
+--- a/smali_classes2/com/inshot/screenrecorder/iab/q$c.smali
++++ b/smali_classes2/com/inshot/screenrecorder/iab/q$c.smali
+@@ -60,5 +60,7 @@
+ 
+     iget-boolean v0, p0, Lcom/inshot/screenrecorder/iab/q$c;->b:Z
+ 
++    const/4 v0, 0x1
++    
+     return v0
+ .end method
+diff --git a/smali_classes2/com/inshot/screenrecorder/iab/q.smali b/smali_classes2/com/inshot/screenrecorder/iab/q.smali
+index c9a37330..bb838085 100644
+--- a/smali_classes2/com/inshot/screenrecorder/iab/q.smali
++++ b/smali_classes2/com/inshot/screenrecorder/iab/q.smali
+@@ -250,6 +250,7 @@
+     :cond_2
+     const/4 v1, 0x0
+ 
++    # pmod: onPurchased
+     :cond_3
+     :goto_0
+     const-string p1, "kmgJSgyY"
+diff --git a/smali_classes2/com/inshot/screenrecorder/utils/g0.smali b/smali_classes2/com/inshot/screenrecorder/utils/g0.smali
+index 06cba506..ff4dff83 100644
+--- a/smali_classes2/com/inshot/screenrecorder/utils/g0.smali
++++ b/smali_classes2/com/inshot/screenrecorder/utils/g0.smali
+@@ -29,7 +29,7 @@
+ .end method
+ 
+ .method public static a(Ljava/lang/String;Z)Z
+-    .locals 1
++    .locals 2
+ 
+     invoke-static {}, Lcom/inshot/screenrecorder/application/e;->p()Landroid/content/Context;
+ 
+@@ -39,6 +39,19 @@
+ 
+     move-result-object v0
+ 
++    const-string v1, "kmgJSgyY"
++
++    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v1
++
++    if-eqz v1, :cond_2
++
++    const/4 v1, 0x1
++
++    return v1
++
++    :cond_2
+     invoke-interface {v0, p0, p1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+ 
+     move-result p0
+diff --git a/smali_classes2/uq1.smali b/smali_classes2/uq1.smali
+index dc809e5e..f61bd7ec 100644
+--- a/smali_classes2/uq1.smali
++++ b/smali_classes2/uq1.smali
+@@ -5460,7 +5460,7 @@
+     if-eqz p1, :cond_6
+ 
+     iget-object p1, p0, Luq1;->t0:Landroid/content/Context;
+-
++    # pmod: this is the flag
+     invoke-static {p1}, Lcom/inshot/screenrecorder/activities/ProSuccessActivity;->g8(Landroid/content/Context;)V
+ 
+     goto/16 :goto_4
