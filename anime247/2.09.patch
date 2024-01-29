@@ -1,0 +1,15 @@
+diff --git a/smali_classes5/a73.smali b/smali_classes5/a73.smali
+index 26f1c0ac..2ffcfbe1 100644
+--- a/smali_classes5/a73.smali
++++ b/smali_classes5/a73.smali
+@@ -1149,6 +1149,10 @@
+ .method public static final r()Z
+     .locals 2
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 1
+     const-string v0, "vip"
+ 
