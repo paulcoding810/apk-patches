@@ -17,6 +17,7 @@
 - [Mobizen](./com.rsupport.mvagent/)
 - [Niagara Launcher](./bitpit.launcher/)
 - [Songsterr](./com.songsterr/)
+- [Vbook](./com.vbook.app/)
 
 ## Disclaimer
 
