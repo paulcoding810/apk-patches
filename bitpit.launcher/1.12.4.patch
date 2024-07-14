@@ -1,0 +1,19 @@
+commit 53cbc5472d0334b0c0df5f13fde8b8bf047c7eae
+Author: longnghia <41385034+longnghia@users.noreply.github.com>
+Date:   Sun Jul 14 15:20:39 2024 +0700
+
+    modded
+
+diff --git a/smali/b/Gi8sK19yVc69Zy5JiYVyhQY7.smali b/smali/b/Gi8sK19yVc69Zy5JiYVyhQY7.smali
+index 2da023d..1ab073a 100644
+--- a/smali/b/Gi8sK19yVc69Zy5JiYVyhQY7.smali
++++ b/smali/b/Gi8sK19yVc69Zy5JiYVyhQY7.smali
+@@ -152,7 +152,7 @@
+ 
+     .line 16
+     .line 17
+-    const/4 v1, 0x0
++    const/4 v1, 0x1
+ 
+     .line 18
+     invoke-direct {v0, v1, v1, v1}, Lb/mi6pqekMAc65rRc344SSmOXHUZc9;-><init>(ZZZ)V
