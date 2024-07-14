@@ -1,0 +1,21 @@
+commit 07faef2e12e12d90d5615a6086ac0efc8a58d24e
+Author: longnghia <41385034+longnghia@users.noreply.github.com>
+Date:   Sun Jul 14 16:52:09 2024 +0700
+
+    modded
+
+diff --git a/smali/yd/a0.smali b/smali/yd/a0.smali
+index 69056fa8..405307b9 100644
+--- a/smali/yd/a0.smali
++++ b/smali/yd/a0.smali
+@@ -882,7 +882,9 @@
+ .method public static m(Landroid/content/Context;)Z
+     .locals 3
+ 
+-    const/4 v0, 0x0
++    const/4 v0, 0x1
++
++    return v0
+ 
+     .line 1
+     :try_start_0
