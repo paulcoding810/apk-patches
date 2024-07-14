@@ -4,11 +4,11 @@
 
 ## Commands
 
-- Create patch file
-
-  ```sh
-  git show --pretty="" > version.patch
-  ```
+- Use helper script: `./run.sh path_to_apk`. It does:
+  - Extract apk info
+  - Decode apk & create repo
+  - Build Loop
+  - Create patch
 
 ### Packages
 
