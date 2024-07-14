@@ -71,7 +71,7 @@ main() {
     get_apk_info "$1"
     
     echo 'Decode Apk'
-    # decode "$apk_file_path"
+    decode "$1"
 
     prompt_user
 }
