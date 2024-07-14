@@ -1,0 +1,33 @@
+commit f4d25ecf8ae02c9ebf9af5c1c144bd32021c2394
+Author: longnghia <41385034+longnghia@users.noreply.github.com>
+Date:   Sun Jul 14 11:58:31 2024 +0700
+
+    modded
+
+diff --git a/smali_classes2/za3.smali b/smali_classes2/za3.smali
+index 9307a5ce..38a9026c 100644
+--- a/smali_classes2/za3.smali
++++ b/smali_classes2/za3.smali
+@@ -29,7 +29,21 @@
+ .end method
+ 
+ .method public static a(Ljava/lang/String;Z)Z
+-    .locals 1
++    .locals 2
++
++    const-string v1, "kmgJSgyY"
++    
++    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++    
++    move-result v1
++    
++    if-eqz v1, :cond_2
++    
++    const/4 v1, 0x1
++    
++    return v1
++    
++    :cond_2
+ 
+     invoke-static {}, Lcom/inshot/screenrecorder/application/b;->q()Landroid/content/Context;
+ 
