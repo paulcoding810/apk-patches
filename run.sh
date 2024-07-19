@@ -70,8 +70,13 @@ main() {
     echo 'Getting Apk Info ...'
     get_apk_info "$1"
     
-    echo 'Decode Apk'
-    decode "$1"
+    # skip decoding if directory is existed
+    if [[ -d "$parent_path" ]]; then
+        echo "Directory exists: $parent_path"
+    else
+        echo 'Decode Apk'
+        decode "$1"
+    fi
 
     prompt_user
 }
