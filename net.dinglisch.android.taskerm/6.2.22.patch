@@ -1,0 +1,13 @@
+diff --git a/smali_classes2/com/joaomgcd/taskerm/helper/p$j$a.smali b/smali_classes2/com/joaomgcd/taskerm/helper/p$j$a.smali
+index ee1c5aaa..7ba80b5d 100644
+--- a/smali_classes2/com/joaomgcd/taskerm/helper/p$j$a.smali
++++ b/smali_classes2/com/joaomgcd/taskerm/helper/p$j$a.smali
+@@ -74,6 +74,8 @@
+ .method public bridge synthetic invoke()Ljava/lang/Object;
+     .locals 1
+ 
++    return-void
++
+     invoke-virtual {p0}, Lcom/joaomgcd/taskerm/helper/p$j$a;->a()Ls8/k0;
+ 
+     move-result-object v0
