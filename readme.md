@@ -19,6 +19,7 @@
 - [Mobizen](./com.rsupport.mvagent/)
 - [Niagara Launcher](./bitpit.launcher/)
 - [Songsterr](./com.songsterr/)
+- [Todaii](./mobi.eup.cnnews)
 - [Vbook](./com.vbook.app/)
 - [XPlore](./com.lonelycatgames.Xplore/)
 - [XRecorder](./videoeditor.videorecorder.screenrecorder)

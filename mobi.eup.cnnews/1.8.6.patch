@@ -1,0 +1,85 @@
+diff --git a/smali/mobi/eup/cnnews/util/app/PrefHelper.smali b/smali/mobi/eup/cnnews/util/app/PrefHelper.smali
+index 8972f51f..0315abc1 100644
+--- a/smali/mobi/eup/cnnews/util/app/PrefHelper.smali
++++ b/smali/mobi/eup/cnnews/util/app/PrefHelper.smali
+@@ -2192,6 +2192,8 @@
+ 
+     move-result v0
+ 
++    const/4 v0, 0x1
++
+     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v0
+diff --git a/smali_classes3/mobi/eup/cnnews/api/user/model/PremiumVerifier$DataField.smali b/smali_classes3/mobi/eup/cnnews/api/user/model/PremiumVerifier$DataField.smali
+index 3f11b8c1..79c57805 100644
+--- a/smali_classes3/mobi/eup/cnnews/api/user/model/PremiumVerifier$DataField.smali
++++ b/smali_classes3/mobi/eup/cnnews/api/user/model/PremiumVerifier$DataField.smali
+@@ -100,6 +100,8 @@
+     .line 28
+     iget-object v0, p0, Lmobi/eup/cnnews/api/user/model/PremiumVerifier$DataField;->isPremium:Ljava/lang/Integer;
+ 
++    const/4 v0, 0x1
++
+     return-object v0
+ .end method
+ 
+diff --git a/smali_classes3/mobi/eup/cnnews/model/CommentListResult$User.smali b/smali_classes3/mobi/eup/cnnews/model/CommentListResult$User.smali
+index df793d21..531777c3 100644
+--- a/smali_classes3/mobi/eup/cnnews/model/CommentListResult$User.smali
++++ b/smali_classes3/mobi/eup/cnnews/model/CommentListResult$User.smali
+@@ -124,6 +124,8 @@
+     .line 16
+     iget v0, p0, Lmobi/eup/cnnews/model/CommentListResult$User;->is_premium:I
+ 
++    const/4 v0, 0x1
++
+     return v0
+ .end method
+ 
+diff --git a/smali_classes3/mobi/eup/cnnews/model/hsk/HSKUserAnswer$User.smali b/smali_classes3/mobi/eup/cnnews/model/hsk/HSKUserAnswer$User.smali
+index d34e1dc5..fa7ccfcf 100644
+--- a/smali_classes3/mobi/eup/cnnews/model/hsk/HSKUserAnswer$User.smali
++++ b/smali_classes3/mobi/eup/cnnews/model/hsk/HSKUserAnswer$User.smali
+@@ -444,6 +444,8 @@
+     .line 36
+     iget v0, p0, Lmobi/eup/cnnews/model/hsk/HSKUserAnswer$User;->isPremium:I
+ 
++    const/4 v0, 0x1
++
+     return v0
+ .end method
+ 
+diff --git a/smali_classes3/mobi/eup/cnnews/model/user/User.smali b/smali_classes3/mobi/eup/cnnews/model/user/User.smali
+index 1dd1b7be..97c2c96d 100644
+--- a/smali_classes3/mobi/eup/cnnews/model/user/User.smali
++++ b/smali_classes3/mobi/eup/cnnews/model/user/User.smali
+@@ -250,6 +250,8 @@
+ 
+     move-object/from16 v3, p10
+ 
++    const-string p11, "true"
++
+     move-object/from16 v4, p11
+ 
+     move-object/from16 v5, p12
+@@ -1569,6 +1571,8 @@
+     .line 17
+     iget-object v0, p0, Lmobi/eup/cnnews/model/user/User;->isPremium:Ljava/lang/String;
+ 
++    const-string v0, "1"
++
+     return-object v0
+ .end method
+ 
+@@ -1612,6 +1616,10 @@
+ .method public final isUserPremium()Z
+     .locals 2
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 62
+     iget-object v0, p0, Lmobi/eup/cnnews/model/user/User;->isPremium:Ljava/lang/String;
+ 
