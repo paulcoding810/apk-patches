@@ -1,0 +1,13 @@
+diff --git a/smali_classes4/xm/e3.smali b/smali_classes4/xm/e3.smali
+index b81cdc2b..bc4665a7 100644
+--- a/smali_classes4/xm/e3.smali
++++ b/smali_classes4/xm/e3.smali
+@@ -624,6 +624,8 @@
+     .line 21
+     move-result v1
+ 
++    const/4 v1, 0x1
++
+     .line 22
+     if-eqz v1, :cond_1
+ 
