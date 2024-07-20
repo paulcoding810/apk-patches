@@ -13,6 +13,7 @@
 ### Packages
 
 - [AZ Screen Recorder](./com.hecorat.screenrecorder.free/)
+- [Developer Assistant](./com.appsisle.developerassistant)
 - [Elsa](./us.nobarriers.elsa/)
 - [Hợp âm chuẩn](./com.hac.android.guitarchord/)
 - [Mobizen](./com.rsupport.mvagent/)

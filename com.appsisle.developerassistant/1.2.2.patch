@@ -1,0 +1,13 @@
+diff --git a/smali/s6/h.smali b/smali/s6/h.smali
+index c59031a..1abaf25 100644
+--- a/smali/s6/h.smali
++++ b/smali/s6/h.smali
+@@ -272,6 +272,8 @@
+     .line 16
+     .line 17
+     const/4 v1, 0x1
++    
++    const/4 v0, 0x1
+ 
+     .line 18
+     if-eq v0, v1, :cond_4
