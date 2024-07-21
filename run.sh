@@ -41,6 +41,10 @@ sign_and_install() {
 
 save_patch() {
     mkdir -p $package_name
+    git --git-dir "$parent_path/.git" add .
+    git --git-dir "$parent_path/.git"  commit -m "modded$package_name $version_code"
+    subl .
+    subl readme.md
     git --git-dir "$parent_path/.git" show --pretty="" > "$package_name/$version_code.patch"
 }
 
