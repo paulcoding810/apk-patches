@@ -20,6 +20,7 @@
 - [Niagara Launcher](./bitpit.launcher/)
 - [Songsterr](./com.songsterr/)
 - [Vbook](./com.vbook.app/)
+- [XPlore](./com.lonelycatgames.Xplore/)
 - [XRecorder](./videoeditor.videorecorder.screenrecorder)
 
 ## Disclaimer

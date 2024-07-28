@@ -1,0 +1,15 @@
+diff --git a/smali_classes3/N6/X.smali b/smali_classes3/N6/X.smali
+index b79ae264..482328c1 100644
+--- a/smali_classes3/N6/X.smali
++++ b/smali_classes3/N6/X.smali
+@@ -3378,6 +3378,10 @@
+ .method public final n()Z
+     .locals 1
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 1
+     sget-object v0, LN6/X;->j:Ljava/util/List;
+ 
