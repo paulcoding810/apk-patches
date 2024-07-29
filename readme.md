@@ -15,6 +15,7 @@
 - [AZ Screen Recorder](./com.hecorat.screenrecorder.free/)
 - [Developer Assistant](./com.appsisle.developerassistant)
 - [Elsa](./us.nobarriers.elsa/)
+- [Hanzii](./com.eup.hanzii/)
 - [GString](./org.cohortor.gstrings)
 - [Hợp âm chuẩn](./com.hac.android.guitarchord/)
 - [Mobizen](./com.rsupport.mvagent/)

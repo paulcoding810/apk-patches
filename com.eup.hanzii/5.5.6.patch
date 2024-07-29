@@ -1,0 +1,15 @@
+diff --git a/smali/m7/l.smali b/smali/m7/l.smali
+index 756883ca..2be308c9 100644
+--- a/smali/m7/l.smali
++++ b/smali/m7/l.smali
+@@ -868,6 +868,10 @@
+ .method public final m()Z
+     .locals 8
+ 
++    const/4 v5, 0x1
++
++    return v5
++
+     .line 1
+     invoke-virtual {p0}, Lm7/l;->g()J
+ 
