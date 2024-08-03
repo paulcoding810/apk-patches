@@ -1,0 +1,3 @@
+# Trace
+
+- check SharePreferences file
