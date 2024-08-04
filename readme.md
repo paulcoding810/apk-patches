@@ -21,6 +21,7 @@
 - [Mobizen](./com.rsupport.mvagent/)
 - [Niagara Launcher](./bitpit.launcher/)
 - [Songsterr](./com.songsterr/)
+- [Screen Translate](./com.recognize_text.translate.screen/)
 - [SuperChinese](./com.superchinese/)
 - [Todaii](./mobi.eup.cnnews)
 - [Vbook](./com.vbook.app/)

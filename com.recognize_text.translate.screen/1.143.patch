@@ -1,0 +1,15 @@
+diff --git a/smali_classes3/q5/d.smali b/smali_classes3/q5/d.smali
+index c5ccf4ef..0219214e 100644
+--- a/smali_classes3/q5/d.smali
++++ b/smali_classes3/q5/d.smali
+@@ -213,6 +213,10 @@
+ .method public static C()Z
+     .locals 4
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 1
+     const/4 v0, 0x0
+ 
