@@ -1,3 +1,48 @@
+diff --git a/smali_classes2/com/superchinese/db/DBUnlockUtil.smali b/smali_classes2/com/superchinese/db/DBUnlockUtil.smali
+index a74eac43..2a429a28 100644
+--- a/smali_classes2/com/superchinese/db/DBUnlockUtil.smali
++++ b/smali_classes2/com/superchinese/db/DBUnlockUtil.smali
+@@ -339,6 +339,10 @@
+ .method public final declared-synchronized hasUnlockRecord(Lcom/superchinese/model/LessonViewUnit;)Z
+     .locals 5
+ 
++    const/4 v1, 0x1
++
++    return v1
++
+     monitor-enter p0
+ 
+     if-eqz p1, :cond_0
+@@ -479,6 +483,10 @@
+ .method public final declared-synchronized hasUnlockRecord(Ljava/lang/String;)Z
+     .locals 6
+ 
++    const/4 v1, 0x1
++
++    return v1
++
+     monitor-enter p0
+ 
+     :try_start_0
+diff --git a/smali_classes2/com/superchinese/model/LessonStart.smali b/smali_classes2/com/superchinese/model/LessonStart.smali
+index 297c0c05..7c02d5ba 100644
+--- a/smali_classes2/com/superchinese/model/LessonStart.smali
++++ b/smali_classes2/com/superchinese/model/LessonStart.smali
+@@ -3612,6 +3612,14 @@
+ .method public final getUnlock()Ljava/lang/Integer;
+     .locals 1
+ 
++    const/4 v0, 0x1
++
++    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++
++    move-result-object v0
++
++    return-object v0
++
+     iget-object v0, p0, Lcom/superchinese/model/LessonStart;->unlock:Ljava/lang/Integer;
+ 
+     return-object v0
 diff --git a/smali_classes2/com/superchinese/model/User.smali b/smali_classes2/com/superchinese/model/User.smali
 index cefce530..2eb60be0 100644
 --- a/smali_classes2/com/superchinese/model/User.smali
@@ -12,7 +57,7 @@ index cefce530..2eb60be0 100644
  .end method
  
 diff --git a/smali_classes2/com/superchinese/util/LocalDataUtil.smali b/smali_classes2/com/superchinese/util/LocalDataUtil.smali
-index 7a3105d8..0142325c 100644
+index 7a3105d8..3683099b 100644
 --- a/smali_classes2/com/superchinese/util/LocalDataUtil.smali
 +++ b/smali_classes2/com/superchinese/util/LocalDataUtil.smali
 @@ -2246,6 +2246,19 @@
@@ -35,3 +80,25 @@ index 7a3105d8..0142325c 100644
      const-string v0, "key"
  
      invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+@@ -2716,6 +2729,10 @@
+ .method public final y()Z
+     .locals 5
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     const-string v0, "trial_time_left"
+ 
+     const-wide/16 v1, 0x0
+@@ -2742,6 +2759,10 @@
+ .method public final z()Z
+     .locals 3
+ 
++    const/4 v1, 0x1
++
++    return v1
++
+     const-string v0, "vip"
+ 
+     const/4 v1, 0x0
