@@ -1,0 +1,13 @@
+diff --git a/smali/t5/f.smali b/smali/t5/f.smali
+index 0bd8980..bb98a5b 100644
+--- a/smali/t5/f.smali
++++ b/smali/t5/f.smali
+@@ -29,6 +29,8 @@
+ 
+     move-result p0
+ 
++    const/4 p0, 0x1
++
+     sput-boolean p0, Lt5/f;->a:Z
+ 
+     return p0

@@ -12,6 +12,7 @@
 
 ### Packages
 
+- [Auto Clicker](./com.truedevelopersstudio.automatictap.autoclicker/)
 - [AZ Screen Recorder](./com.hecorat.screenrecorder.free/)
 - [Developer Assistant](./com.appsisle.developerassistant)
 - [Elsa](./us.nobarriers.elsa/)
