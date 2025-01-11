@@ -1,0 +1,113 @@
+diff --git a/smali/com/superchinese/db/DBUnlockUtil.smali b/smali/com/superchinese/db/DBUnlockUtil.smali
+index c1bf469f..2287529c 100644
+--- a/smali/com/superchinese/db/DBUnlockUtil.smali
++++ b/smali/com/superchinese/db/DBUnlockUtil.smali
+@@ -309,6 +309,10 @@
+ 
+ .method public final hasUnlockRecord(Lcom/superchinese/model/LessonViewUnit;)Z
+     .locals 5
++    
++    const/4 v1, 0x1
++    
++    return v1
+ 
+     if-eqz p1, :cond_0
+ 
+@@ -431,6 +435,10 @@
+ .method public final hasUnlockRecord(Ljava/lang/String;)Z
+     .locals 6
+ 
++    const/4 v1, 0x1
++    
++    return v1
++
+     sget-object v0, Lcom/superchinese/base/App;->l:Lcom/superchinese/base/App$a;
+ 
+     invoke-virtual {v0}, Lcom/superchinese/base/App$a;->c()Lcom/superchinese/base/App;
+diff --git a/smali_classes3/com/superchinese/model/LessonStart.smali b/smali_classes3/com/superchinese/model/LessonStart.smali
+index bfbb9d00..28544724 100644
+--- a/smali_classes3/com/superchinese/model/LessonStart.smali
++++ b/smali_classes3/com/superchinese/model/LessonStart.smali
+@@ -4168,6 +4168,14 @@
+ 
+ .method public final getUnlock()Ljava/lang/Integer;
+     .locals 1
++    
++    const/4 v0, 0x1
++
++    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++
++    move-result-object v0
++
++    return-object v0
+ 
+     iget-object v0, p0, Lcom/superchinese/model/LessonStart;->unlock:Ljava/lang/Integer;
+ 
+diff --git a/smali_classes3/com/superchinese/model/User.smali b/smali_classes3/com/superchinese/model/User.smali
+index 876b5bae..5240afc9 100644
+--- a/smali_classes3/com/superchinese/model/User.smali
++++ b/smali_classes3/com/superchinese/model/User.smali
+@@ -5044,6 +5044,8 @@
+ 
+     iget v0, p0, Lcom/superchinese/model/User;->is_chao:I
+ 
++    const/4 v0, 0x1
++
+     return v0
+ .end method
+ 
+@@ -10207,6 +10209,8 @@
+ 
+     iget v0, p0, Lcom/superchinese/model/User;->is_chao:I
+ 
++    const/4 v0, 0x1
++
+     return v0
+ .end method
+ 
+diff --git a/smali_classes3/com/superchinese/util/LocalDataUtil.smali b/smali_classes3/com/superchinese/util/LocalDataUtil.smali
+index a76145a4..64ba5369 100644
+--- a/smali_classes3/com/superchinese/util/LocalDataUtil.smali
++++ b/smali_classes3/com/superchinese/util/LocalDataUtil.smali
+@@ -2191,6 +2191,19 @@
+ .method public final l(Ljava/lang/String;)Ljava/lang/String;
+     .locals 3
+ 
++    const-string v0, "vip_lifetime"
++
++    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v1
++
++    if-eqz v1, :cond_1
++
++    const-string v0, "1"
++
++    return-object v0
++
++    :cond_1
+     const-string v0, "key"
+ 
+     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+@@ -2524,6 +2537,10 @@
+ .method public final v()Z
+     .locals 5
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     const-string v0, "trial_time_left"
+ 
+     const-wide/16 v1, 0x0
+@@ -2552,7 +2569,9 @@
+ 
+     const-string v0, "vip"
+ 
+-    const/4 v1, 0x0
++    const/4 v1, 0x1
++
++    return v1
+ 
+     invoke-virtual {p0, v0, v1}, Lcom/superchinese/util/LocalDataUtil;->i(Ljava/lang/String;I)I
+ 
