@@ -1,0 +1,15 @@
+diff --git a/smali/J2/e.smali b/smali/J2/e.smali
+index 7c2e637..259cfa1 100644
+--- a/smali/J2/e.smali
++++ b/smali/J2/e.smali
+@@ -35,7 +35,9 @@
+     .locals 1
+ 
+     .line 1
+-    const/4 v0, 0x3
++    const/4 v0, 0x0
++
++    return v0
+ 
+     .line 2
+     invoke-static {v0, p0}, Lp/e;->a(II)Z
