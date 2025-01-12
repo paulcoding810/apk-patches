@@ -1,0 +1,20 @@
+diff --git a/smali/m7/m.smali b/smali/m7/m.smali
+index 9801c908..c4a2c1f4 100644
+--- a/smali/m7/m.smali
++++ b/smali/m7/m.smali
+@@ -868,6 +868,15 @@
+ .method public final m()Z
+     .locals 8
+ 
++    iget-object v0, p0, Lm7/m;->c:Ljava/lang/String;
++
++    if-eqz v0, :goto_0
++
++    const/4 v0, 0x1
++ 
++    return v0
++
++    :goto_0
+     .line 1
+     invoke-virtual {p0}, Lm7/m;->g()J
+ 
