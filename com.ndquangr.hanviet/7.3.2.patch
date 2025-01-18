@@ -1,0 +1,16 @@
+diff --git a/smali/c/b/h/a/a/m0.smali b/smali/c/b/h/a/a/m0.smali
+index b4c3105c..ff88464a 100644
+--- a/smali/c/b/h/a/a/m0.smali
++++ b/smali/c/b/h/a/a/m0.smali
+@@ -56,9 +56,9 @@
+ 
+     move-result-object v0
+ 
++    return-void
++
+     const-string v2, "BaseAdView.loadAd"
+ 
+     invoke-interface {v0, v1, v2}, Lc/b/h/a/h/a/m40;->b(Ljava/lang/Throwable;Ljava/lang/String;)V
+-
+-    return-void
+ .end method
