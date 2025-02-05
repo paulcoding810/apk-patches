@@ -1,0 +1,15 @@
+diff --git a/smali/com/spocky/projengmenu/PTApplication.smali b/smali/com/spocky/projengmenu/PTApplication.smali
+index 9de0691..ab9369b 100644
+--- a/smali/com/spocky/projengmenu/PTApplication.smali
++++ b/smali/com/spocky/projengmenu/PTApplication.smali
+@@ -267,6 +267,10 @@
+ .method public final b()Z
+     .locals 2
+ 
++     const/4 v0, 0x0
++
++    return v0
++
+     .line 1
+     iget-object v0, p0, Lcom/spocky/projengmenu/PTApplication;->D:LZ5/b;
+ 

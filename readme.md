@@ -21,6 +21,7 @@
 - [Hợp âm chuẩn](./com.hac.android.guitarchord/)
 - [Mobizen](./com.rsupport.mvagent/)
 - [Niagara Launcher](./bitpit.launcher/)
+- [Projectivity Launcher](./com.spocky.projengmenu)
 - [Songsterr](./com.songsterr/)
 - [Screen Translate](./com.recognize_text.translate.screen/)
 - [SuperChinese](./com.superchinese/)
