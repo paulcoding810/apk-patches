@@ -1,0 +1,13 @@
+diff --git a/smali/bitpit/launcher/niagarald/RgnUlnM2ELAOABHbsJcYhzO7K.smali b/smali/bitpit/launcher/niagarald/RgnUlnM2ELAOABHbsJcYhzO7K.smali
+index 2dfe942..4b2c226 100644
+--- a/smali/bitpit/launcher/niagarald/RgnUlnM2ELAOABHbsJcYhzO7K.smali
++++ b/smali/bitpit/launcher/niagarald/RgnUlnM2ELAOABHbsJcYhzO7K.smali
+@@ -3981,7 +3981,7 @@
+ 
+     .line 14
+     .line 15
+-    const/4 v1, 0x0
++    const/4 v1, 0x1
+ 
+     .line 16
+     invoke-direct {v0, v1, v1, v1}, Lb/XREuyxkGxCRY;-><init>(ZZZ)V
