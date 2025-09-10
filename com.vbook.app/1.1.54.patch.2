@@ -1,0 +1,50 @@
+commit 89b613f9d3bedda876607c45183f36950dd13def
+Author: paulcoding810 <longnghia2.00@gmail.com>
+Date:   Thu Sep 11 00:47:26 2025 +0700
+
+    modded com.vbook.app 1.1.54
+
+diff --git a/smali_classes3/gd.smali b/smali_classes3/gd.smali
+index 18a5809e..a3556fed 100644
+--- a/smali_classes3/gd.smali
++++ b/smali_classes3/gd.smali
+@@ -784,6 +784,10 @@
+ .method public static k()Z
+     .locals 3
+ 
++    const/4 v1, 0x1
++
++    return v1
++
+     .line 1
+     invoke-static {}, Loj0;->n()Loj0;
+ 
+diff --git a/smali_classes3/pi6.smali b/smali_classes3/pi6.smali
+index de25d29a..a4350ef2 100644
+--- a/smali_classes3/pi6.smali
++++ b/smali_classes3/pi6.smali
+@@ -866,6 +866,9 @@
+     move-result v0
+ 
+     .line 10
++
++    const/4 v0, 0x1
++
+     return v0
+ .end method
+ 
+diff --git a/smali_classes3/so.smali b/smali_classes3/so.smali
+index 8770e17c..6155210a 100644
+--- a/smali_classes3/so.smali
++++ b/smali_classes3/so.smali
+@@ -1196,6 +1196,10 @@
+ .method public p()Z
+     .locals 3
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 1
+     iget-object v0, p0, Lso;->a:Landroid/content/SharedPreferences;
+ 

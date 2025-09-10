@@ -1,4 +1,5 @@
 # Trace
 
 - tv_level
-- UpdateDialog show()
+- hide UpdateDialog (find for version string)
+- hide tutorial (is.show.tutorial=true)
