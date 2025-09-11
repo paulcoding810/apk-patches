@@ -1,0 +1,15 @@
+diff --git a/smali/app/simple/inure/preferences/TrialPreferences.smali b/smali/app/simple/inure/preferences/TrialPreferences.smali
+index e9cf4296..b6084c34 100644
+--- a/smali/app/simple/inure/preferences/TrialPreferences.smali
++++ b/smali/app/simple/inure/preferences/TrialPreferences.smali
+@@ -292,6 +292,10 @@
+ .method public final isAppFullVersionEnabled()Z
+     .locals 5
+ 
++    const/4 v0, 0x1
++
++    return v0
++
+     .line 51
+     sget-object v0, Lapp/simple/inure/preferences/SharedPreferences;->INSTANCE:Lapp/simple/inure/preferences/SharedPreferences;
+ 
